@@ -23,7 +23,7 @@ class appProdUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerat
         $this->logger = $logger;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
-        'jules_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'JulesBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'ens_jules_homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Ens\\JulesBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'homepage' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }

@@ -1,7 +1,7 @@
 <?php
 
-/* JulesBundle:Default:index.html.twig */
-class __TwigTemplate_1495c57342f3f32d5449fba0f7c9797eba5904741537ec1d4643bf5dd92aeb83 extends Twig_Template
+/* EnsJulesBundle:Default:index.html.twig */
+class __TwigTemplate_aa6dd496fc04debe10c96cb45f074b35ea47319c61d8e1ced25af25b291e0944 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -22,7 +22,7 @@ class __TwigTemplate_1495c57342f3f32d5449fba0f7c9797eba5904741537ec1d4643bf5dd92
 
     public function getTemplateName()
     {
-        return "JulesBundle:Default:index.html.twig";
+        return "EnsJulesBundle:Default:index.html.twig";
     }
 
     public function getDebugInfo()

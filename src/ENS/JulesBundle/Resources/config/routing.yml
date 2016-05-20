@@ -1,0 +1,3 @@
+ens_jules_homepage:
+    path:     /
+    defaults: { _controller: EnsJulesBundle:Default:index }

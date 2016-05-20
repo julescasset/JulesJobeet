@@ -1,6 +1,6 @@
 <?php
 
-namespace JulesBundle\Tests\Controller;
+namespace Ens\JulesBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

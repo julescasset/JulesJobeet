@@ -78,7 +78,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
-  'JulesBundle:Default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\JulesBundle/Resources/views/Default/index.html.twig',
+  'EnsJulesBundle:Default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\Ens\\JulesBundle/Resources/views/Default/index.html.twig',
   '::base.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/default/index.html.twig',
 );

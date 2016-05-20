@@ -78,7 +78,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
-  'JulesBundle:Default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\JulesBundle/Resources/views/Default/index.html.twig',
+  'EnsJulesBundle:Default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\Ens\\JulesBundle/Resources/views/Default/index.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:config.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/config.html.twig',

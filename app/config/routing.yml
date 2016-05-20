@@ -1,5 +1,5 @@
-jules:
-    resource: "@JulesBundle/Resources/config/routing.yml"
+ens_jules:
+    resource: "@EnsJulesBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:

@@ -1,3 +1,0 @@
-jules_homepage:
-    path:     /
-    defaults: { _controller: JulesBundle:Default:index }
