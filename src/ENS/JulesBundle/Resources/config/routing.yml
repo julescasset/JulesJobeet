@@ -1,3 +1,8 @@
-ens_jules_homepage:
-    path:     /
+# src/Ens/JulesBundle/Resources/config/routing.yml
+EnsJulesBundle_job:
+    resource: "@EnsJulesBundle/Resources/config/routing/job.yml"
+    prefix: /job
+
+EnsJulesBundle_homepage:
+    pattern:  /hello/{name}
     defaults: { _controller: EnsJulesBundle:Default:index }
