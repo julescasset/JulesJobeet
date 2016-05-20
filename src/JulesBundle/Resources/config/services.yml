@@ -1,0 +1,4 @@
+services:
+#    jules.example:
+#        class: JulesBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
