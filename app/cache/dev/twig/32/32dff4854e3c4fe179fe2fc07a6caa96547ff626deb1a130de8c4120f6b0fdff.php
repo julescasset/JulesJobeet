@@ -15,8 +15,8 @@ class __TwigTemplate_24a2d3b4e58ac4f3e40b73c605bbca3433b8737909c1884efdf391d34ed
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dea48ab4bf8db26d39bd8b47406903de03e9fc1f221b844a4438f44f4cc24678 = $this->env->getExtension("native_profiler");
-        $__internal_dea48ab4bf8db26d39bd8b47406903de03e9fc1f221b844a4438f44f4cc24678->enter($__internal_dea48ab4bf8db26d39bd8b47406903de03e9fc1f221b844a4438f44f4cc24678_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar_js.html.twig"));
+        $__internal_dff8358507a8a092524a8cff45756d299e18e59b07d9af4b534d5bcc307969af = $this->env->getExtension("native_profiler");
+        $__internal_dff8358507a8a092524a8cff45756d299e18e59b07d9af4b534d5bcc307969af->enter($__internal_dff8358507a8a092524a8cff45756d299e18e59b07d9af4b534d5bcc307969af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:toolbar_js.html.twig"));
 
         // line 1
         echo "<div id=\"sfwdt";
@@ -130,7 +130,7 @@ class __TwigTemplate_24a2d3b4e58ac4f3e40b73c605bbca3433b8737909c1884efdf391d34ed
 /*]]>*/</script>
 ";
         
-        $__internal_dea48ab4bf8db26d39bd8b47406903de03e9fc1f221b844a4438f44f4cc24678->leave($__internal_dea48ab4bf8db26d39bd8b47406903de03e9fc1f221b844a4438f44f4cc24678_prof);
+        $__internal_dff8358507a8a092524a8cff45756d299e18e59b07d9af4b534d5bcc307969af->leave($__internal_dff8358507a8a092524a8cff45756d299e18e59b07d9af4b534d5bcc307969af_prof);
 
     }
 

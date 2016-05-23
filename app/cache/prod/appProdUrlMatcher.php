@@ -44,15 +44,14 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             not_ens_job:
 
             // ens_job_show
-            if (preg_match('#^/job/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_ens_job_show;
-                }
-
+            if (preg_match('#^/job/(?P<company>[^/]++)/(?P<location>[^/]++)/(?P<id>\\d+)/(?P<position>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_show')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::showAction',));
             }
-            not_ens_job_show:
+
+            // ens_job_preview
+            if (preg_match('#^/job/(?P<company>[^/]++)/(?P<location>[^/]++)/(?P<token>\\w+)/(?P<position>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_preview')), array (  '_controller' => 'EnsJules:Job:preview',));
+            }
 
             // ens_job_new
             if ($pathinfo === '/job/new') {
@@ -65,33 +64,45 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             }
             not_ens_job_new:
 
-            // ens_job_edit
-            if (preg_match('#^/job/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_ens_job_edit;
-                }
+            // ens_job_create
+            if ($pathinfo === '/job/create') {
+                return array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::createAction',  '_route' => 'ens_job_create',);
+            }
 
+            // ens_job_edit
+            if (preg_match('#^/job/(?P<token>[^/]++)/edit$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_edit')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::editAction',));
             }
-            not_ens_job_edit:
+
+            // ens_job_update
+            if (preg_match('#^/job/(?P<token>[^/]++)/update$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_update')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::updateAction',));
+            }
 
             // ens_job_delete
-            if (preg_match('#^/job/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if ($this->context->getMethod() != 'DELETE') {
-                    $allow[] = 'DELETE';
-                    goto not_ens_job_delete;
-                }
-
+            if (preg_match('#^/job/(?P<token>[^/]++)/delete$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_delete')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::deleteAction',));
             }
-            not_ens_job_delete:
+
+            // ens_job_publish
+            if (preg_match('#^/job/(?P<token>[^/]++)/publish$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_publish')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::publishAction',));
+            }
+
+            // ens_job_extend
+            if (preg_match('#^/job/(?P<token>[^/]++)/extend$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_extend')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::extendAction',));
+            }
 
         }
 
         // EnsJulesBundle_homepage
-        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'EnsJulesBundle_homepage')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\DefaultController::indexAction',));
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'EnsJulesBundle_homepage');
+            }
+
+            return array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::indexAction',  '_route' => 'EnsJulesBundle_homepage',);
         }
 
         // homepage

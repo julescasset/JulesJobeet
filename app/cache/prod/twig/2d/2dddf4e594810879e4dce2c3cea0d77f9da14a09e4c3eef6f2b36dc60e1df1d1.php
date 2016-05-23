@@ -74,7 +74,7 @@ class __TwigTemplate_9e6562791b84f3c8a6b66dffb6fa342db7301e38b4635215fdfa032e712
                     <td class=\"position\">
                         <a href=\"";
             // line 15
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_show", array("id" => $this->getAttribute($context["job"], "id", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "companySlug", array()), "location" => $this->getAttribute($context["job"], "locationSlug", array()), "position" => $this->getAttribute($context["job"], "positionSlug", array()))), "html", null, true);
             echo "\">
                             ";
             // line 16
@@ -135,7 +135,7 @@ class __TwigTemplate_9e6562791b84f3c8a6b66dffb6fa342db7301e38b4635215fdfa032e712
 /*                 <tr class="{{ cycle(['even', 'odd'], loop.index) }}">*/
 /*                     <td class="location">{{ job.location }}</td>*/
 /*                     <td class="position">*/
-/*                         <a href="{{ path('ens_job_show', { 'id': job.id }) }}">*/
+/*                         <a href="{{ path('ens_job_show', { 'id': job.id, 'company': job.companySlug, 'location': job.locationSlug, 'position': job.positionSlug}) }}">*/
 /*                             {{ job.position }}*/
 /*                         </a>*/
 /*                     </td>*/
