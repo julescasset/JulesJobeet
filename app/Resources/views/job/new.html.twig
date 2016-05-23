@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% extends 'EnsJulesBundle::layout.html.twig' %}
+
+{% block content %}
+    <!-- original template code goes here -->
+    <h1>Job creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('ens_job_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
