@@ -83,12 +83,12 @@ class __TwigTemplate_02c886c7602cbde16d9a6bd01d9f7dde5b99b145656eb2bea98495ca10a
     <div id=\"content\">
         ";
         // line 48
-        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "hasFlash", array(0 => "notice"), "method")) {
+        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashbag", array()), "get", array(0 => "notice"), "method")) {
             // line 49
             echo "            <div class=\"flash_notice\">
                 ";
             // line 50
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flash", array(0 => "notice"), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["flash_message"]) ? $context["flash_message"] : null), "html", null, true);
             echo "
             </div>
         ";
@@ -97,12 +97,12 @@ class __TwigTemplate_02c886c7602cbde16d9a6bd01d9f7dde5b99b145656eb2bea98495ca10a
         echo "
         ";
         // line 54
-        if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "hasFlash", array(0 => "error"), "method")) {
+        if ($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flashbag", array()), "get", array(0 => "error"), "method")) {
             // line 55
             echo "            <div class=\"flash_error\">
                 ";
             // line 56
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "session", array()), "flash", array(0 => "error"), "method"), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["flash_message"]) ? $context["flash_message"] : null), "html", null, true);
             echo "
             </div>
         ";
@@ -238,15 +238,15 @@ class __TwigTemplate_02c886c7602cbde16d9a6bd01d9f7dde5b99b145656eb2bea98495ca10a
 /*     </div>*/
 /* */
 /*     <div id="content">*/
-/*         {% if app.session.hasFlash('notice') %}*/
+/*         {% if app.session.flashbag.get('notice') %}*/
 /*             <div class="flash_notice">*/
-/*                 {{ app.session.flash('notice') }}*/
+/*                 {{ flash_message }}*/
 /*             </div>*/
 /*         {% endif %}*/
 /* */
-/*         {% if app.session.hasFlash('error') %}*/
+/*         {% if app.session.flashbag.get('error') %}*/
 /*             <div class="flash_error">*/
-/*                 {{ app.session.flash('error') }}*/
+/*                 {{ flash_message }}*/
 /*             </div>*/
 /*         {% endif %}*/
 /* */

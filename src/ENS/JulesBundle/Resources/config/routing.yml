@@ -4,5 +4,5 @@ EnsJulesBundle_job:
     prefix: /job
 
 EnsJulesBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: EnsJulesBundle:Default:index }
+    pattern:  /
+    defaults: { _controller: EnsJulesBundle:Job:index }
