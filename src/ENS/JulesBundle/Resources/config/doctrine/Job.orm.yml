@@ -1,6 +1,7 @@
 # src/Ens/JulesBundle/Resources/config/doctrine/Job.orm.yml
 Ens\JulesBundle\Entity\Job:
   type: entity
+  repositoryClass: Ens\JulesBundle\Repository\JobRepository
   table: job
   id:
     id:
