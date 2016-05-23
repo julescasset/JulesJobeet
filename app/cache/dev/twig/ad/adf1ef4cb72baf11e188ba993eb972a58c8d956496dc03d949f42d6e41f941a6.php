@@ -8,62 +8,63 @@ class __TwigTemplate_d3a0b47d3bd6dee6118757b5b875dabfa48cd63b3c329818191d0542d46
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":job:new.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsJulesBundle::layout.html.twig", ":job:new.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "EnsJulesBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2bc374bfcb1d941bf5d261c16e0a83c9f102d5af2e493b6270e0452fc690d7a7 = $this->env->getExtension("native_profiler");
-        $__internal_2bc374bfcb1d941bf5d261c16e0a83c9f102d5af2e493b6270e0452fc690d7a7->enter($__internal_2bc374bfcb1d941bf5d261c16e0a83c9f102d5af2e493b6270e0452fc690d7a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":job:new.html.twig"));
+        $__internal_2822e17f61937a96e6344494593d1a652a151a21d936081f8548b728141e650d = $this->env->getExtension("native_profiler");
+        $__internal_2822e17f61937a96e6344494593d1a652a151a21d936081f8548b728141e650d->enter($__internal_2822e17f61937a96e6344494593d1a652a151a21d936081f8548b728141e650d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":job:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_2bc374bfcb1d941bf5d261c16e0a83c9f102d5af2e493b6270e0452fc690d7a7->leave($__internal_2bc374bfcb1d941bf5d261c16e0a83c9f102d5af2e493b6270e0452fc690d7a7_prof);
+        $__internal_2822e17f61937a96e6344494593d1a652a151a21d936081f8548b728141e650d->leave($__internal_2822e17f61937a96e6344494593d1a652a151a21d936081f8548b728141e650d_prof);
 
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
-        $__internal_33c42b52f0d6ae6555d9fb21cc4b2dc0d1faf9175e03e925ba72125b070e434a = $this->env->getExtension("native_profiler");
-        $__internal_33c42b52f0d6ae6555d9fb21cc4b2dc0d1faf9175e03e925ba72125b070e434a->enter($__internal_33c42b52f0d6ae6555d9fb21cc4b2dc0d1faf9175e03e925ba72125b070e434a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d0f72c51bbaa81fe6d2f8f63da3dd86d86a46b25d5dffbd58b2bd0719af69997 = $this->env->getExtension("native_profiler");
+        $__internal_d0f72c51bbaa81fe6d2f8f63da3dd86d86a46b25d5dffbd58b2bd0719af69997->enter($__internal_d0f72c51bbaa81fe6d2f8f63da3dd86d86a46b25d5dffbd58b2bd0719af69997_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "    <h1>Job creation</h1>
+        echo "    <!-- original template code goes here -->
+    <h1>Job creation</h1>
 
     ";
-        // line 6
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
         ";
-        // line 7
+        // line 8
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
         <input type=\"submit\" value=\"Create\" />
     ";
-        // line 9
+        // line 10
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
     <ul>
         <li>
             <a href=\"";
-        // line 13
+        // line 14
         echo $this->env->getExtension('routing')->getPath("ens_job_index");
         echo "\">Back to the list</a>
         </li>
     </ul>
 ";
         
-        $__internal_33c42b52f0d6ae6555d9fb21cc4b2dc0d1faf9175e03e925ba72125b070e434a->leave($__internal_33c42b52f0d6ae6555d9fb21cc4b2dc0d1faf9175e03e925ba72125b070e434a_prof);
+        $__internal_d0f72c51bbaa81fe6d2f8f63da3dd86d86a46b25d5dffbd58b2bd0719af69997->leave($__internal_d0f72c51bbaa81fe6d2f8f63da3dd86d86a46b25d5dffbd58b2bd0719af69997_prof);
 
     }
 
@@ -79,12 +80,13 @@ class __TwigTemplate_d3a0b47d3bd6dee6118757b5b875dabfa48cd63b3c329818191d0542d46
 
     public function getDebugInfo()
     {
-        return array (  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  61 => 14,  54 => 10,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'EnsJulesBundle::layout.html.twig' %}*/
 /* */
-/* {% block body %}*/
+/* {% block content %}*/
+/*     <!-- original template code goes here -->*/
 /*     <h1>Job creation</h1>*/
 /* */
 /*     {{ form_start(form) }}*/

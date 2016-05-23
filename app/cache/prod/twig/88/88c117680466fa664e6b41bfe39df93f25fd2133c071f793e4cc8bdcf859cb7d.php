@@ -8,15 +8,15 @@ class __TwigTemplate_fba42070e9fcb35b17f437fec6f3cd344ca7908bd688d7e96c9df52c92e
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":job:new.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsJulesBundle::layout.html.twig", ":job:new.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "EnsJulesBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -25,29 +25,30 @@ class __TwigTemplate_fba42070e9fcb35b17f437fec6f3cd344ca7908bd688d7e96c9df52c92e
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "    <h1>Job creation</h1>
+        echo "    <!-- original template code goes here -->
+    <h1>Job creation</h1>
 
     ";
-        // line 6
+        // line 7
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_start');
         echo "
         ";
-        // line 7
+        // line 8
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
         <input type=\"submit\" value=\"Create\" />
     ";
-        // line 9
+        // line 10
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_end');
         echo "
 
     <ul>
         <li>
             <a href=\"";
-        // line 13
+        // line 14
         echo $this->env->getExtension('routing')->getPath("ens_job_index");
         echo "\">Back to the list</a>
         </li>
@@ -67,12 +68,13 @@ class __TwigTemplate_fba42070e9fcb35b17f437fec6f3cd344ca7908bd688d7e96c9df52c92e
 
     public function getDebugInfo()
     {
-        return array (  51 => 13,  44 => 9,  39 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  52 => 14,  45 => 10,  40 => 8,  36 => 7,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'EnsJulesBundle::layout.html.twig' %}*/
 /* */
-/* {% block body %}*/
+/* {% block content %}*/
+/*     <!-- original template code goes here -->*/
 /*     <h1>Job creation</h1>*/
 /* */
 /*     {{ form_start(form) }}*/

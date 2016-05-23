@@ -106,20 +106,20 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/job')) {
-            // ens_job_index
+            // ens_job
             if (rtrim($pathinfo, '/') === '/job') {
                 if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
                     $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_ens_job_index;
+                    goto not_ens_job;
                 }
 
                 if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'ens_job_index');
+                    return $this->redirect($pathinfo.'/', 'ens_job');
                 }
 
-                return array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::indexAction',  '_route' => 'ens_job_index',);
+                return array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::indexAction',  '_route' => 'ens_job',);
             }
-            not_ens_job_index:
+            not_ens_job:
 
             // ens_job_show
             if (preg_match('#^/job/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {

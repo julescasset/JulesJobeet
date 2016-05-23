@@ -8,36 +8,37 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "job/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("EnsJulesBundle::layout.html.twig", "job/index.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "EnsJulesBundle::layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_454740d2d92cff4891cf83a97eed8f74f568bbec23ac77e6982e4e3a7bd7cf90 = $this->env->getExtension("native_profiler");
-        $__internal_454740d2d92cff4891cf83a97eed8f74f568bbec23ac77e6982e4e3a7bd7cf90->enter($__internal_454740d2d92cff4891cf83a97eed8f74f568bbec23ac77e6982e4e3a7bd7cf90_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
+        $__internal_c4da0b26435cf0fcb2fcfbde48c0c825d08d1fb69a7b6c6f4898fcc6bd6d29e4 = $this->env->getExtension("native_profiler");
+        $__internal_c4da0b26435cf0fcb2fcfbde48c0c825d08d1fb69a7b6c6f4898fcc6bd6d29e4->enter($__internal_c4da0b26435cf0fcb2fcfbde48c0c825d08d1fb69a7b6c6f4898fcc6bd6d29e4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_454740d2d92cff4891cf83a97eed8f74f568bbec23ac77e6982e4e3a7bd7cf90->leave($__internal_454740d2d92cff4891cf83a97eed8f74f568bbec23ac77e6982e4e3a7bd7cf90_prof);
+        $__internal_c4da0b26435cf0fcb2fcfbde48c0c825d08d1fb69a7b6c6f4898fcc6bd6d29e4->leave($__internal_c4da0b26435cf0fcb2fcfbde48c0c825d08d1fb69a7b6c6f4898fcc6bd6d29e4_prof);
 
     }
 
     // line 3
-    public function block_body($context, array $blocks = array())
+    public function block_content($context, array $blocks = array())
     {
-        $__internal_d05ab34417e921de62bbd9abf7258c941fb75953664b48cf8500bb40dd269992 = $this->env->getExtension("native_profiler");
-        $__internal_d05ab34417e921de62bbd9abf7258c941fb75953664b48cf8500bb40dd269992->enter($__internal_d05ab34417e921de62bbd9abf7258c941fb75953664b48cf8500bb40dd269992_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_43be4cb5abee0df7297937c39a862a961fbf41cf2f285f41c94a45d03b5cc273 = $this->env->getExtension("native_profiler");
+        $__internal_43be4cb5abee0df7297937c39a862a961fbf41cf2f285f41c94a45d03b5cc273->enter($__internal_43be4cb5abee0df7297937c39a862a961fbf41cf2f285f41c94a45d03b5cc273_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "    <h1>Job list</h1>
+        echo "    <!-- original template code goes here -->
+    <h1>Job list</h1>
 
     <table>
         <thead>
@@ -63,56 +64,56 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
         </thead>
         <tbody>
         ";
-        // line 29
+        // line 30
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["jobs"]) ? $context["jobs"] : $this->getContext($context, "jobs")));
         foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
-            // line 30
+            // line 31
             echo "            <tr>
                 <td><a href=\"";
-            // line 31
+            // line 32
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_show", array("id" => $this->getAttribute($context["job"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "id", array()), "html", null, true);
             echo "</a></td>
                 <td>";
-            // line 32
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "type", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 33
+            // line 34
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "company", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 34
+            // line 35
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "logo", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 35
+            // line 36
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "url", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 36
+            // line 37
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "position", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 37
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "location", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 38
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "description", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 39
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "howtoapply", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 40
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "token", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 41
+            // line 42
             if ($this->getAttribute($context["job"], "ispublic", array())) {
                 echo "Yes";
             } else {
@@ -120,7 +121,7 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
             }
             echo "</td>
                 <td>";
-            // line 42
+            // line 43
             if ($this->getAttribute($context["job"], "isactivated", array())) {
                 echo "Yes";
             } else {
@@ -128,23 +129,23 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
             }
             echo "</td>
                 <td>";
-            // line 43
+            // line 44
             echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "email", array()), "html", null, true);
             echo "</td>
                 <td>";
-            // line 44
+            // line 45
             if ($this->getAttribute($context["job"], "expiresat", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["job"], "expiresat", array()), "Y-m-d H:i:s"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 45
+            // line 46
             if ($this->getAttribute($context["job"], "createdat", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["job"], "createdat", array()), "Y-m-d H:i:s"), "html", null, true);
             }
             echo "</td>
                 <td>";
-            // line 46
+            // line 47
             if ($this->getAttribute($context["job"], "updatedat", array())) {
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["job"], "updatedat", array()), "Y-m-d H:i:s"), "html", null, true);
             }
@@ -153,13 +154,13 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
                     <ul>
                         <li>
                             <a href=\"";
-            // line 50
+            // line 51
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_show", array("id" => $this->getAttribute($context["job"], "id", array()))), "html", null, true);
             echo "\">show</a>
                         </li>
                         <li>
                             <a href=\"";
-            // line 53
+            // line 54
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_edit", array("id" => $this->getAttribute($context["job"], "id", array()))), "html", null, true);
             echo "\">edit</a>
                         </li>
@@ -171,21 +172,21 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
+        // line 60
         echo "        </tbody>
     </table>
 
     <ul>
         <li>
             <a href=\"";
-        // line 64
+        // line 65
         echo $this->env->getExtension('routing')->getPath("ens_job_new");
         echo "\">Create a new entry</a>
         </li>
     </ul>
 ";
         
-        $__internal_d05ab34417e921de62bbd9abf7258c941fb75953664b48cf8500bb40dd269992->leave($__internal_d05ab34417e921de62bbd9abf7258c941fb75953664b48cf8500bb40dd269992_prof);
+        $__internal_43be4cb5abee0df7297937c39a862a961fbf41cf2f285f41c94a45d03b5cc273->leave($__internal_43be4cb5abee0df7297937c39a862a961fbf41cf2f285f41c94a45d03b5cc273_prof);
 
     }
 
@@ -201,12 +202,13 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
 
     public function getDebugInfo()
     {
-        return array (  182 => 64,  175 => 59,  163 => 53,  157 => 50,  148 => 46,  142 => 45,  136 => 44,  132 => 43,  124 => 42,  116 => 41,  112 => 40,  108 => 39,  104 => 38,  100 => 37,  96 => 36,  92 => 35,  88 => 34,  84 => 33,  80 => 32,  74 => 31,  71 => 30,  67 => 29,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  183 => 65,  176 => 60,  164 => 54,  158 => 51,  149 => 47,  143 => 46,  137 => 45,  133 => 44,  125 => 43,  117 => 42,  113 => 41,  109 => 40,  105 => 39,  101 => 38,  97 => 37,  93 => 36,  89 => 35,  85 => 34,  81 => 33,  75 => 32,  72 => 31,  68 => 30,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
-/* {% extends 'base.html.twig' %}*/
+/* {% extends 'EnsJulesBundle::layout.html.twig' %}*/
 /* */
-/* {% block body %}*/
+/* {% block content %}*/
+/*     <!-- original template code goes here -->*/
 /*     <h1>Job list</h1>*/
 /* */
 /*     <table>*/

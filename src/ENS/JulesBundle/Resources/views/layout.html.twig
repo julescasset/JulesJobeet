@@ -45,15 +45,15 @@
     </div>
 
     <div id="content">
-        {% if app.session.hasFlash('notice') %}
+        {% if app.session.flashbag.get('notice') %}
             <div class="flash_notice">
-                {{ app.session.flash('notice') }}
+                {{ flash_message }}
             </div>
         {% endif %}
 
-        {% if app.session.hasFlash('error') %}
+        {% if app.session.flashbag.get('error') %}
             <div class="flash_error">
-                {{ app.session.flash('error') }}
+                {{ flash_message }}
             </div>
         {% endif %}
 

@@ -15,14 +15,14 @@ class __TwigTemplate_b1ddccedf7546c2f55b4a4a44e595283728a276e8ce9287b389e7fa2c62
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_51da4a4c280f63b97db61cf3d466c1bf410f241783a6b2ef79d37cc4a5f19323 = $this->env->getExtension("native_profiler");
-        $__internal_51da4a4c280f63b97db61cf3d466c1bf410f241783a6b2ef79d37cc4a5f19323->enter($__internal_51da4a4c280f63b97db61cf3d466c1bf410f241783a6b2ef79d37cc4a5f19323_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/reset_widget.html.php"));
+        $__internal_b99bb8046ae56f584e51362a432d4939b597f9007db3a75e0c76fbd4ce825f19 = $this->env->getExtension("native_profiler");
+        $__internal_b99bb8046ae56f584e51362a432d4939b597f9007db3a75e0c76fbd4ce825f19->enter($__internal_b99bb8046ae56f584e51362a432d4939b597f9007db3a75e0c76fbd4ce825f19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/reset_widget.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'button_widget',  array('type' => isset(\$type) ? \$type : 'reset')) ?>
 ";
         
-        $__internal_51da4a4c280f63b97db61cf3d466c1bf410f241783a6b2ef79d37cc4a5f19323->leave($__internal_51da4a4c280f63b97db61cf3d466c1bf410f241783a6b2ef79d37cc4a5f19323_prof);
+        $__internal_b99bb8046ae56f584e51362a432d4939b597f9007db3a75e0c76fbd4ce825f19->leave($__internal_b99bb8046ae56f584e51362a432d4939b597f9007db3a75e0c76fbd4ce825f19_prof);
 
     }
 
