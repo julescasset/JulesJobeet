@@ -1,6 +1,7 @@
 # src/Ens/JulesBundle/Resources/config/doctrine/Category.orm.yml
 Ens\JulesBundle\Entity\Category:
   type: entity
+  repositoryClass: Ens\JulesBundle\Repository\CategoryRepository
   table: category
   id:
     id:
