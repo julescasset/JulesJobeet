@@ -27,7 +27,7 @@ class JobController extends Controller
 
         foreach($categories as $category)
         {
-            $category->setActiveJobs($em->getRepository('EnsJulesBundle:Job')->getActiveJobs($category->getId(), 
+            $category->setActiveJobs($em->getRepository('EnsJulesBundle:Job')->getActiveJobs($category->getId(),
             $this->container->getParameter('max_jobs_on_homepage')));
         }
 
@@ -66,7 +66,11 @@ class JobController extends Controller
      */
     public function showAction(Job $job)
     {
+
         $deleteForm = $this->createDeleteForm($job);
+
+        $em = $this->getDoctrine()->getManager();
+        $job = $em->getRepository('EnsJulesBundle:Job')->getActiveJob($job);
 
         return $this->render('job/show.html.twig', array(
             'job' => $job,
