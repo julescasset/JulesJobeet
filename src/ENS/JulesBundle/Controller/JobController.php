@@ -23,11 +23,12 @@ class JobController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $categories = $em->getRepository('EnsJulesBundle:Job')->getWithJobs();
+        $categories = $em->getRepository('EnsJulesBundle:Category')->getWithJobs();
 
         foreach($categories as $category)
         {
-            $category->setActiveJobs($em->getRepository('EnsJulesBundle:Job')->getActiveJobs($category->getId(), $this->container->getParameter('max_jobs_on_homepage')));
+            $category->setActiveJobs($em->getRepository('EnsJulesBundle:Job')->getActiveJobs($category->getId(), 
+            $this->container->getParameter('max_jobs_on_homepage')));
         }
 
         return $this->render('job/index.html.twig', array(
