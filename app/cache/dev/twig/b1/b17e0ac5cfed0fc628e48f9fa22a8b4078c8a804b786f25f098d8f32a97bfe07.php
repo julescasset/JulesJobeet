@@ -15,8 +15,8 @@ class __TwigTemplate_345c2a05a3051f2aeec6d66c148c5ec0057c4e4c42e9aca6128e3111ac4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d992e5c3eff2b52deef7dc3e763a887a471f4d89d6df1847a76661c4d2bc76bb = $this->env->getExtension("native_profiler");
-        $__internal_d992e5c3eff2b52deef7dc3e763a887a471f4d89d6df1847a76661c4d2bc76bb->enter($__internal_d992e5c3eff2b52deef7dc3e763a887a471f4d89d6df1847a76661c4d2bc76bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Router/panel.html.twig"));
+        $__internal_f5037c9ee977b7c147309f594a6bd5116ad04ceb1a820e4a583fe68c6cc47fe3 = $this->env->getExtension("native_profiler");
+        $__internal_f5037c9ee977b7c147309f594a6bd5116ad04ceb1a820e4a583fe68c6cc47fe3->enter($__internal_f5037c9ee977b7c147309f594a6bd5116ad04ceb1a820e4a583fe68c6cc47fe3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Router/panel.html.twig"));
 
         // line 1
         echo "<h2>Routing</h2>
@@ -197,7 +197,7 @@ $context["trace"], "level", array()) == 2)) {
 </p>
 ";
         
-        $__internal_d992e5c3eff2b52deef7dc3e763a887a471f4d89d6df1847a76661c4d2bc76bb->leave($__internal_d992e5c3eff2b52deef7dc3e763a887a471f4d89d6df1847a76661c4d2bc76bb_prof);
+        $__internal_f5037c9ee977b7c147309f594a6bd5116ad04ceb1a820e4a583fe68c6cc47fe3->leave($__internal_f5037c9ee977b7c147309f594a6bd5116ad04ceb1a820e4a583fe68c6cc47fe3_prof);
 
     }
 

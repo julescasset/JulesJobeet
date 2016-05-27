@@ -3,6 +3,10 @@ EnsJulesBundle_job:
     resource: "@EnsJulesBundle/Resources/config/routing/job.yml"
     prefix: /job
 
+EnsJulesBundle_category:
+    pattern:  /category/{slug}
+    defaults: { _controller: EnsJulesBundle:Category:show }
+
 EnsJulesBundle_homepage:
     pattern:  /
     defaults: { _controller: EnsJulesBundle:Job:index }

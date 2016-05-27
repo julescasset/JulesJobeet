@@ -48,11 +48,6 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_show')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::showAction',));
             }
 
-            // ens_job_preview
-            if (preg_match('#^/job/(?P<company>[^/]++)/(?P<location>[^/]++)/(?P<token>\\w+)/(?P<position>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_preview')), array (  '_controller' => 'EnsJules:Job:preview',));
-            }
-
             // ens_job_new
             if ($pathinfo === '/job/new') {
                 if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
@@ -66,8 +61,14 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
             // ens_job_create
             if ($pathinfo === '/job/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_ens_job_create;
+                }
+
                 return array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::createAction',  '_route' => 'ens_job_create',);
             }
+            not_ens_job_create:
 
             // ens_job_edit
             if (preg_match('#^/job/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
@@ -76,24 +77,53 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
 
             // ens_job_update
             if (preg_match('#^/job/(?P<token>[^/]++)/update$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_ens_job_update;
+                }
+
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_update')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::updateAction',));
             }
+            not_ens_job_update:
 
             // ens_job_delete
             if (preg_match('#^/job/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_ens_job_delete;
+                }
+
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_delete')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::deleteAction',));
             }
+            not_ens_job_delete:
 
             // ens_job_publish
             if (preg_match('#^/job/(?P<token>[^/]++)/publish$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_ens_job_publish;
+                }
+
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_publish')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::publishAction',));
             }
+            not_ens_job_publish:
 
             // ens_job_extend
             if (preg_match('#^/job/(?P<token>[^/]++)/extend$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_ens_job_extend;
+                }
+
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_job_extend')), array (  '_controller' => 'Ens\\JulesBundle\\Controller\\JobController::extendAction',));
             }
+            not_ens_job_extend:
 
+        }
+
+        // EnsJulesBundle_category
+        if (0 === strpos($pathinfo, '/category') && preg_match('#^/category/(?P<slug>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'EnsJulesBundle_category')), array (  '_controller' => 'EnsJulesBundle:Category:show',));
         }
 
         // EnsJulesBundle_homepage

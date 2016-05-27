@@ -22,20 +22,20 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_89dea16df0e04f83f75e4bb1781389294d5583248a9f13f6138b523005c11da5 = $this->env->getExtension("native_profiler");
-        $__internal_89dea16df0e04f83f75e4bb1781389294d5583248a9f13f6138b523005c11da5->enter($__internal_89dea16df0e04f83f75e4bb1781389294d5583248a9f13f6138b523005c11da5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
+        $__internal_5b9604be2645ff99c0eea59989bb2b48d7a13a493d046273529395c7d27aef7a = $this->env->getExtension("native_profiler");
+        $__internal_5b9604be2645ff99c0eea59989bb2b48d7a13a493d046273529395c7d27aef7a->enter($__internal_5b9604be2645ff99c0eea59989bb2b48d7a13a493d046273529395c7d27aef7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "job/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_89dea16df0e04f83f75e4bb1781389294d5583248a9f13f6138b523005c11da5->leave($__internal_89dea16df0e04f83f75e4bb1781389294d5583248a9f13f6138b523005c11da5_prof);
+        $__internal_5b9604be2645ff99c0eea59989bb2b48d7a13a493d046273529395c7d27aef7a->leave($__internal_5b9604be2645ff99c0eea59989bb2b48d7a13a493d046273529395c7d27aef7a_prof);
 
     }
 
     // line 3
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_f2916e5c960c86987dd553ca5bf6c6791889b187f724fc110a3e40772114642a = $this->env->getExtension("native_profiler");
-        $__internal_f2916e5c960c86987dd553ca5bf6c6791889b187f724fc110a3e40772114642a->enter($__internal_f2916e5c960c86987dd553ca5bf6c6791889b187f724fc110a3e40772114642a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7ca52241c2c15ee0021ade3fb56915b29a6f694ea8080ee899cf19522b5d8125 = $this->env->getExtension("native_profiler");
+        $__internal_7ca52241c2c15ee0021ade3fb56915b29a6f694ea8080ee899cf19522b5d8125->enter($__internal_7ca52241c2c15ee0021ade3fb56915b29a6f694ea8080ee899cf19522b5d8125_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
         echo "    ";
@@ -47,15 +47,15 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
         echo "\" type=\"text/css\" media=\"all\" />
 ";
         
-        $__internal_f2916e5c960c86987dd553ca5bf6c6791889b187f724fc110a3e40772114642a->leave($__internal_f2916e5c960c86987dd553ca5bf6c6791889b187f724fc110a3e40772114642a_prof);
+        $__internal_7ca52241c2c15ee0021ade3fb56915b29a6f694ea8080ee899cf19522b5d8125->leave($__internal_7ca52241c2c15ee0021ade3fb56915b29a6f694ea8080ee899cf19522b5d8125_prof);
 
     }
 
     // line 8
     public function block_content($context, array $blocks = array())
     {
-        $__internal_044e8d63cf24d15fb4d4688d796a359c7a31fb5132b50d9252825840edae2491 = $this->env->getExtension("native_profiler");
-        $__internal_044e8d63cf24d15fb4d4688d796a359c7a31fb5132b50d9252825840edae2491->enter($__internal_044e8d63cf24d15fb4d4688d796a359c7a31fb5132b50d9252825840edae2491_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_a5b5e8d0329dff548a99a44d7a35928aa8b77e0cf77162e0d978582a4d75d62c = $this->env->getExtension("native_profiler");
+        $__internal_a5b5e8d0329dff548a99a44d7a35928aa8b77e0cf77162e0d978582a4d75d62c->enter($__internal_a5b5e8d0329dff548a99a44d7a35928aa8b77e0cf77162e0d978582a4d75d62c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 9
         echo "    <div id=\"jobs\">
@@ -70,14 +70,19 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
                     <div class=\"feed\">
                         <a href=\"\">Feed</a>
                     </div>
-                    <h1>";
-            // line 16
+                    <h1>
+                        <a href=\"";
+            // line 17
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJulesBundle_category", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
-            echo "</h1>
+            echo "
+                        </a>
+                    </h1>
                 </div>
                 <table class=\"jobs\">
                     ";
-            // line 19
+            // line 22
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["category"], "activejobs", array()));
             $context['loop'] = array(
@@ -94,27 +99,27 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["job"]) {
-                // line 20
+                // line 23
                 echo "                        <tr class=\"";
                 echo twig_escape_filter($this->env, twig_cycle(array(0 => "even", 1 => "odd"), $this->getAttribute($context["loop"], "index", array())), "html", null, true);
                 echo "\">
                             <td class=\"location\">";
-                // line 21
+                // line 24
                 echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "location", array()), "html", null, true);
                 echo "</td>
                             <td class=\"position\">
                                 <a href=\"";
-                // line 23
+                // line 26
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("ens_job_show", array("id" => $this->getAttribute($context["job"], "id", array()), "company" => $this->getAttribute($context["job"], "companySlug", array()), "location" => $this->getAttribute($context["job"], "locationSlug", array()), "position" => $this->getAttribute($context["job"], "positionSlug", array()))), "html", null, true);
                 echo "\">
                                     ";
-                // line 24
+                // line 27
                 echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "position", array()), "html", null, true);
                 echo "
                                 </a>
                             </td>
                             <td class=\"company\">";
-                // line 27
+                // line 30
                 echo twig_escape_filter($this->env, $this->getAttribute($context["job"], "company", array()), "html", null, true);
                 echo "</td>
                         </tr>
@@ -131,19 +136,35 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['job'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 30
+            // line 33
             echo "                </table>
-            </div>
+                ";
+            // line 34
+            if ($this->getAttribute($context["category"], "morejobs", array())) {
+                // line 35
+                echo "                    <div class=\"more_jobs\">
+                        and <a href=\"";
+                // line 36
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJulesBundle_category", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "morejobs", array()), "html", null, true);
+                echo "</a>
+                        more...
+                    </div>
+                ";
+            }
+            // line 40
+            echo "            </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 42
         echo "    </div>
 ";
         
-        $__internal_044e8d63cf24d15fb4d4688d796a359c7a31fb5132b50d9252825840edae2491->leave($__internal_044e8d63cf24d15fb4d4688d796a359c7a31fb5132b50d9252825840edae2491_prof);
+        $__internal_a5b5e8d0329dff548a99a44d7a35928aa8b77e0cf77162e0d978582a4d75d62c->leave($__internal_a5b5e8d0329dff548a99a44d7a35928aa8b77e0cf77162e0d978582a4d75d62c_prof);
 
     }
 
@@ -159,7 +180,7 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
 
     public function getDebugInfo()
     {
-        return array (  143 => 33,  135 => 30,  118 => 27,  112 => 24,  108 => 23,  103 => 21,  98 => 20,  81 => 19,  75 => 16,  68 => 11,  64 => 10,  61 => 9,  55 => 8,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
+        return array (  164 => 42,  157 => 40,  148 => 36,  145 => 35,  143 => 34,  140 => 33,  123 => 30,  117 => 27,  113 => 26,  108 => 24,  103 => 23,  86 => 22,  76 => 17,  68 => 11,  64 => 10,  61 => 9,  55 => 8,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsJulesBundle::layout.html.twig' %}*/
@@ -177,7 +198,10 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
 /*                     <div class="feed">*/
 /*                         <a href="">Feed</a>*/
 /*                     </div>*/
-/*                     <h1>{{ category.name }}</h1>*/
+/*                     <h1>*/
+/*                         <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.name }}*/
+/*                         </a>*/
+/*                     </h1>*/
 /*                 </div>*/
 /*                 <table class="jobs">*/
 /*                     {% for job in category.activejobs %}*/
@@ -192,6 +216,12 @@ class __TwigTemplate_3d66af4e05f1831da2bf90a6bc9876879483a0e1e7f9ec01f67ae525267
 /*                         </tr>*/
 /*                     {% endfor %}*/
 /*                 </table>*/
+/*                 {% if category.morejobs %}*/
+/*                     <div class="more_jobs">*/
+/*                         and <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.morejobs }}</a>*/
+/*                         more...*/
+/*                     </div>*/
+/*                 {% endif %}*/
 /*             </div>*/
 /*         {% endfor %}*/
 /*     </div>*/
