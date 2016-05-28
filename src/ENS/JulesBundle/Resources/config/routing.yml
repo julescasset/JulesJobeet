@@ -4,8 +4,8 @@ EnsJulesBundle_job:
     prefix: /job
 
 EnsJulesBundle_category:
-    pattern:  /category/{slug}
-    defaults: { _controller: EnsJulesBundle:Category:show }
+    resource: "@EnsJulesBundle/Resources/config/routing/category.yml"
+    prefix:   /category
 
 EnsJulesBundle_homepage:
     pattern:  /

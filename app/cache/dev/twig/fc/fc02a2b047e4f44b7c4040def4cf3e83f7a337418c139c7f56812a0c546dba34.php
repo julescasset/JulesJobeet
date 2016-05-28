@@ -15,14 +15,14 @@ class __TwigTemplate_95937600c2af5a634b7f0644523b3bf96fc2a7543e58a7145de03f9fabe
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_cd7c946cecc439c613d8bd2ad4e947cc29ea98355a685a720acbdcdb45b9486d = $this->env->getExtension("native_profiler");
-        $__internal_cd7c946cecc439c613d8bd2ad4e947cc29ea98355a685a720acbdcdb45b9486d->enter($__internal_cd7c946cecc439c613d8bd2ad4e947cc29ea98355a685a720acbdcdb45b9486d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
+        $__internal_fa17b7efd0a0f2be99637f114a0739e0341983bd170c5f1d03378c23a351386a = $this->env->getExtension("native_profiler");
+        $__internal_fa17b7efd0a0f2be99637f114a0739e0341983bd170c5f1d03378c23a351386a->enter($__internal_fa17b7efd0a0f2be99637f114a0739e0341983bd170c5f1d03378c23a351386a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Framework/Form/choice_options.html.php"));
 
         // line 1
         echo "<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
 ";
         
-        $__internal_cd7c946cecc439c613d8bd2ad4e947cc29ea98355a685a720acbdcdb45b9486d->leave($__internal_cd7c946cecc439c613d8bd2ad4e947cc29ea98355a685a720acbdcdb45b9486d_prof);
+        $__internal_fa17b7efd0a0f2be99637f114a0739e0341983bd170c5f1d03378c23a351386a->leave($__internal_fa17b7efd0a0f2be99637f114a0739e0341983bd170c5f1d03378c23a351386a_prof);
 
     }
 

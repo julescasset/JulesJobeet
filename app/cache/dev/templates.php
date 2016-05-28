@@ -112,9 +112,11 @@
   'WebProfilerBundle:Profiler:toolbar_redirect.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_redirect.html.twig',
   'WebProfilerBundle:Router:panel.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Router/panel.html.twig',
   '::base.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/base.html.twig',
+  ':category:show.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/default/index.html.twig',
   ':job:edit.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/index.html.twig',
+  ':job:list.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/list.html.twig',
   ':job:new.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/new.html.twig',
   ':job:show.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/show.html.twig',
 );

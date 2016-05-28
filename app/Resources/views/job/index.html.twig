@@ -14,7 +14,7 @@
                         <a href="">Feed</a>
                     </div>
                     <h1>
-                        <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.name }}
+                        <a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.name }}
                         </a>
                     </h1>
                 </div>
@@ -23,7 +23,7 @@
                 </table>
                 {% if category.morejobs %}
                     <div class="more_jobs">
-                        and <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.morejobs }}</a>
+                        and <a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.morejobs }}</a>
                         more...
                     </div>
                 {% endif %}

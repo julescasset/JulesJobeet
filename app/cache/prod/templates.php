@@ -81,9 +81,11 @@
   'EnsJulesBundle:Default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\Ens\\JulesBundle/Resources/views/Default/index.html.twig',
   'EnsJulesBundle::layout.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\src\\Ens\\JulesBundle/Resources/views/layout.html.twig',
   '::base.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/base.html.twig',
+  ':category:show.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/default/index.html.twig',
   ':job:edit.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/index.html.twig',
+  ':job:list.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/list.html.twig',
   ':job:new.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/new.html.twig',
   ':job:show.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/show.html.twig',
 );
