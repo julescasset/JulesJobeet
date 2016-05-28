@@ -63,7 +63,9 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
         }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
             // line 11
-            echo "            <div>
+            echo "            <div class=\"category_";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "slug", array()), "html", null, true);
+            echo "\">
                 <div class=\"category\">
                     <div class=\"feed\">
                         <a href=\"\">Feed</a>
@@ -71,7 +73,7 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
                     <h1>
                         <a href=\"";
             // line 17
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJulesBundle_category", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("category_show", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
             echo "
@@ -91,7 +93,7 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
                 echo "                    <div class=\"more_jobs\">
                         and <a href=\"";
                 // line 26
-                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("EnsJulesBundle_category", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("category_show", array("slug" => $this->getAttribute($context["category"], "slug", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "morejobs", array()), "html", null, true);
                 echo "</a>
@@ -131,7 +133,7 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
 
     public function getDebugInfo()
     {
-        return array (  118 => 32,  103 => 30,  94 => 26,  91 => 25,  89 => 24,  86 => 23,  84 => 22,  74 => 17,  66 => 11,  49 => 10,  46 => 9,  43 => 8,  37 => 5,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  120 => 32,  105 => 30,  96 => 26,  93 => 25,  91 => 24,  88 => 23,  86 => 22,  76 => 17,  66 => 11,  49 => 10,  46 => 9,  43 => 8,  37 => 5,  32 => 4,  29 => 3,  11 => 1,);
     }
 }
 /* {% extends 'EnsJulesBundle::layout.html.twig' %}*/
@@ -144,13 +146,13 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
 /* {% block content %}*/
 /*     <div id="jobs">*/
 /*         {% for category in categories %}*/
-/*             <div>*/
+/*             <div class="category_{{ category.slug }}">*/
 /*                 <div class="category">*/
 /*                     <div class="feed">*/
 /*                         <a href="">Feed</a>*/
 /*                     </div>*/
 /*                     <h1>*/
-/*                         <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.name }}*/
+/*                         <a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.name }}*/
 /*                         </a>*/
 /*                     </h1>*/
 /*                 </div>*/
@@ -159,7 +161,7 @@ class __TwigTemplate_f2d9945f7cb02e9ab85c466186396c01e82a406f3819d2168455051f7fc
 /*                 </table>*/
 /*                 {% if category.morejobs %}*/
 /*                     <div class="more_jobs">*/
-/*                         and <a href="{{ path('EnsJulesBundle_category', { 'slug': category.slug }) }}">{{ category.morejobs }}</a>*/
+/*                         and <a href="{{ path('category_show', { 'slug': category.slug }) }}">{{ category.morejobs }}</a>*/
 /*                         more...*/
 /*                     </div>*/
 /*                 {% endif %}*/
