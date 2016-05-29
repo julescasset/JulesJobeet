@@ -222,5 +222,42 @@ class JobController extends Controller
         ));
     }
 
+    public function publishAction(Request $request,$token)
+    {
+        $form = $this->createPublishForm($token);
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getEntityManager();
+            $job = $em->getRepository('EnsJulesBundle:Job')->findOneByToken($token);
+
+            if (!$job) {
+                throw $this->createNotFoundException('Unable to find Job entity.');
+            }
+
+            $job->publish();
+            $em->persist($job);
+            $em->flush();
+
+            $this->get('session')->setFlash('notice', 'Your job is now online for 30 days.');
+        }
+
+        return $this->redirect($this->generateUrl('ens_job_preview', array(
+            'company' => $job->getCompanySlug(),
+            'location' => $job->getLocationSlug(),
+            'token' => $job->getToken(),
+            'position' => $job->getPositionSlug()
+        )));
+    }
+
+    private function createPublishForm($token)
+    {
+        return $this->createFormBuilder(array('token' => $token))
+            ->add('token', 'hidden')
+            ->getForm()
+            ;
+    }
+
 
 }

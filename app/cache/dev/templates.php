@@ -114,6 +114,7 @@
   '::base.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/base.html.twig',
   ':category:show.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/category/show.html.twig',
   ':default:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/default/index.html.twig',
+  ':job:admin.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/admin.html.twig',
   ':job:edit.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/edit.html.twig',
   ':job:index.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/index.html.twig',
   ':job:list.html.twig' => 'D:\\Dev\\XAMPP\\htdocs\\JulesJobeet\\app/Resources\\views/job/list.html.twig',
