@@ -45,6 +45,7 @@ class JobController extends Controller
     public function newAction(Request $request)
     {
         $job = new Job();
+        $job->setType('full-time');
         $form = $this->createForm('Ens\JulesBundle\Form\JobType', $job);
         $form->handleRequest($request);
 

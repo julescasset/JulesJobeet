@@ -586,4 +586,13 @@ class Job
             unlink($file);
         }
     }
+
+    public function setTokenValue()
+    {
+        if(!$this->getToken())
+        {
+            $this->token = sha1($this->getEmail().rand(11111, 99999));
+        }
+    }
+    
 }
