@@ -22,6 +22,7 @@ class JobType extends AbstractType
         $builder->add('token');
         $builder->add('is_public', null, array('label' => 'Public?'));
         $builder->add('email');
+        $builder->add('file', 'file', array('label' => 'Company logo', 'required' => false));
 
     }
 

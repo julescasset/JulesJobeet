@@ -20,3 +20,5 @@ Ens\JulesBundle\Entity\Job:
       email:
           - NotBlank: ~
           - Email: ~
+      file:
+          - Image: ~

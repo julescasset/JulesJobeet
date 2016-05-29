@@ -63,3 +63,6 @@ Ens\JulesBundle\Entity\Job:
   lifecycleCallbacks:
     prePersist: [ setCreatedAtValue, setExpiresAtValue ]
     preUpdate: [ setUpdatedAtValue ]
+    postPersist: [ upload ]
+    postUpdate: [ upload ]
+    postRemove: [ removeUpload ]
