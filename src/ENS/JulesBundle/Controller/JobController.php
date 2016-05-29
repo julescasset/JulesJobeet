@@ -123,7 +123,7 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('job_preview', array(
+            return $this->redirect($this->generateUrl('ens_job_preview', array(
                 'company' => $job->getCompanySlug(),
                 'location' => $job->getLocationSlug(),
                 'token' => $job->getToken(),
@@ -190,10 +190,10 @@ class JobController extends Controller
             $em->persist($job);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('ens_job_show', array(
+            return $this->redirect($this->generateUrl('ens_job_preview', array(
                 'company' => $job->getCompanySlug(),
                 'location' => $job->getLocationSlug(),
-                'id' => $job->getId(),
+                'token' => $job->getToken(),
                 'position' => $job->getPositionSlug()
             )));
         }
@@ -201,6 +201,24 @@ class JobController extends Controller
         return $this->render('job/new.html.twig', array(
             'job' => $job,
             'form'   => $form->createView()
+        ));
+    }
+
+    public function previewAction($token)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $job = $em->getRepository('EnsJulesBundle:Job')->findOneByToken($token);
+
+        if (!$job) {
+            throw $this->createNotFoundException('Unable to find Job entity.');
+        }
+
+        $deleteForm = $this->createDeleteForm($job->getId());
+
+        return $this->render('job/show.html.twig', array(
+            'job'      => $job,
+            'delete_form' => $deleteForm->createView(),
         ));
     }
 
