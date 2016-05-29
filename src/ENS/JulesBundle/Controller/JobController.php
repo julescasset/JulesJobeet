@@ -85,23 +85,55 @@ class JobController extends Controller
      * Displays a form to edit an existing Job entity.
      *
      */
-    public function editAction(Request $request, Job $job)
+    public function editAction($token)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $job = $em->getRepository('EnsJulesBundle:Job')->findOneByToken($token);
+
+        if (!$job) {
+            throw $this->createNotFoundException('Unable to find Job entity.');
+        }
+
         $deleteForm = $this->createDeleteForm($job);
         $editForm = $this->createForm('Ens\JulesBundle\Form\JobType', $job);
+
+        return $this->render('job/edit.html.twig.', array(
+            'job' => $job,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    public function updateAction(Request $request, $token)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $job = $em->getRepository('EnsJulesBundle:Job')->findOneByToken($token);
+
+        if (!$job) {
+            throw $this->createNotFoundException('Unable to find Job entity.');
+        }
+
+        $editForm = $this->createForm(new JobType(), $job);
+        $deleteForm = $this->createDeleteForm($token);
+
         $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+        if ($editForm->isValid()) {
             $em->persist($job);
             $em->flush();
 
-            return $this->redirectToRoute('ens_job_edit', array('id' => $job->getId()));
+            return $this->redirect($this->generateUrl('job_preview', array(
+                'company' => $job->getCompanySlug(),
+                'location' => $job->getLocationSlug(),
+                'token' => $job->getToken(),
+                'position' => $job->getPositionSlug()
+            )));
         }
 
         return $this->render('job/edit.html.twig', array(
-            'job' => $job,
-            'edit_form' => $editForm->createView(),
+            'entity'      => $job,
+            'edit_form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -110,19 +142,25 @@ class JobController extends Controller
      * Deletes a Job entity.
      *
      */
-    public function deleteAction(Request $request, Job $job)
+    public function deleteAction(Request $request, $token)
     {
-        $form = $this->createDeleteForm($job);
+        $form = $this->createDeleteForm($token);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $job = $em->getRepository('EnsJulesBundle:Job')->findOneByToken($token);
+
+            if (!$job) {
+                throw $this->createNotFoundException('Unable to find Job entity.');
+            }
+
             $em->remove($job);
             $em->flush();
         }
-
-        return $this->redirectToRoute('ens_job');
+        return $this->redirect($this->generateUrl('ens_job'));
     }
+
 
     /**
      * Creates a form to delete a Job entity.
@@ -131,13 +169,12 @@ class JobController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Job $job)
+    private function createDeleteForm($token)
     {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('ens_job_delete', array('id' => $job->getId())))
-            ->setMethod('DELETE')
+        return $this->createFormBuilder(array('token' => $token))
+            ->add('token', 'hidden')
             ->getForm()
-        ;
+            ;
     }
 
     public function createAction()

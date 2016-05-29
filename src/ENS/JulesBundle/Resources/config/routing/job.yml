@@ -26,7 +26,7 @@ ens_job_create:
     methods:  POST
 
 ens_job_edit:
-    path:  /{id}/edit
+    path:  /{token}/edit
     defaults: { _controller: "EnsJulesBundle:Job:edit" }
 
 ens_job_update:
@@ -35,7 +35,7 @@ ens_job_update:
     methods:  POST
 
 ens_job_delete:
-    path:  /{id}/delete
+    path:  /{token}/delete
     defaults: { _controller: "EnsJulesBundle:Job:delete" }
     methods:  POST
 
