@@ -138,4 +138,33 @@ class JobController extends Controller
             ->getForm()
         ;
     }
+
+    public function createAction()
+    {
+        $job  = new Job();
+        $request = $this->getRequest();
+        $form    = $this->createForm(new JobType(), $job);
+        $form->bindRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getEntityManager();
+
+            $em->persist($job);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('ens_job_show', array(
+                'company' => $job->getCompanySlug(),
+                'location' => $job->getLocationSlug(),
+                'id' => $job->getId(),
+                'position' => $job->getPositionSlug()
+            )));
+        }
+
+        return $this->render('job/new.htm.twig', array(
+            'job' => $job,
+            'form'   => $form->createView()
+        ));
+    }
+
+
 }
